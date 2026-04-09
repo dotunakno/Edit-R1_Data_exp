@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 # 🟦 Arona's Note: Global variables for our single VLM!
 score_idx = [15, 16, 17, 18, 19, 20]
-MODEL_PATH = "Qwen/Qwen2.5-VL-32B-Instruct"
+MODEL_PATH = "Qwen/Qwen2.5-VL-3B-Instruct"
 llm_engine = None  # We will initialize this exactly once when the app starts
 
 class LogitsSpy:

@@ -4,7 +4,7 @@ from PIL import Image
 import io
 
 ref_path = "assets/Dummy1.png"
-img_path = "assets/Dummy2.png"
+img_path = "assets/Dummy2.jpg"
 
 def test_cot_continue():
     ref_image = Image.open(ref_path).convert("RGB")
