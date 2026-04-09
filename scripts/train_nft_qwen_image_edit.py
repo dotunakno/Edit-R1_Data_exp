@@ -450,7 +450,7 @@ def main(_):
 
     text_encoder_dtype = mixed_precision_dtype if enable_amp else torch.float32
 
-    pipeline.vae.to(device, dtype=torch.float32)  # VAE usually fp32
+    pipeline.vae.to(device, dtype=torch.bfloat16)  # VAE usually fp32
 
     prepare_fsdp_model(
         pipeline.text_encoder,

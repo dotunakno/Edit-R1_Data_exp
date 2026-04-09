@@ -74,7 +74,7 @@ def qwen_mllm_reward():
     }
     config = _get_config(
         base_model="qwen_image_edit",
-        n_gpus=48,
+        n_gpus=1,
         gradient_step_per_epoch=1,
         reward_fn=reward_fn,
         name="mllm_score_continue",
