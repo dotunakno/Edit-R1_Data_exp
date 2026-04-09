@@ -3,8 +3,8 @@ import pickle
 from PIL import Image
 import io
 
-ref_path = "assets/ref_image.png"
-img_path = "assets/image.png"
+ref_path = "assets/Dummy1.png"
+img_path = "assets/Dummy2.png"
 
 def test_cot_continue():
     ref_image = Image.open(ref_path).convert("RGB")
