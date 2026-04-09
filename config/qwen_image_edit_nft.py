@@ -12,9 +12,9 @@ def _get_config(base_model="qwen_image_edit", n_gpus=1, gradient_step_per_epoch=
 
     config.base_model = base_model
     config.transformer_path = None
-    config.dataset = "../edit-r1-dataset"
+    config.dataset = "/content/Edit-r1_Data_exp"
     
-    config.pretrained.model = "Qwen/Qwen-Image-Edit-2509"
+    config.pretrained.model = "Qwen/Qwen-Image-Edit-2511"
     config.sample.num_steps = 6
     config.sample.eval_num_steps = 15
     config.sample.guidance_scale = 1.0

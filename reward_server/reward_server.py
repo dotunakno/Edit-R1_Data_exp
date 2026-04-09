@@ -115,7 +115,10 @@ if __name__ == "__main__":
     llm_engine = LLM(
         model=MODEL_PATH, 
         limit_mm_per_prompt={"image": 3}, 
-        tensor_parallel_size=1
+        tensor_parallel_size=1,
+        
+        gpu_memory_utilization=0.4,  # Tell vLLM to only reserve 40% of your VRAM
+        max_model_len=4096           # Cap the context window (adjust as needed for your prompts)
     )
     
     print("Model loaded successfully! Starting Flask server... 🍓")
