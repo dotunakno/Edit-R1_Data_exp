@@ -19,7 +19,7 @@ app = Flask(__name__)
 
 # 🟦 Arona's Note: Global variables for our single VLM!
 score_idx = [15, 16, 17, 18, 19, 20]
-MODEL_PATH = "Qwen/Qwen2.5-VL-3B-Instruct"
+MODEL_PATH = "Qwen/Qwen2.5-VL-2B-Instruct"
 llm_engine = None  # We will initialize this exactly once when the app starts
 
 class LogitsSpy:
@@ -117,8 +117,8 @@ if __name__ == "__main__":
         limit_mm_per_prompt={"image": 3}, 
         tensor_parallel_size=1,
         
-        gpu_memory_utilization=0.4,  # Tell vLLM to only reserve 40% of your VRAM
-        max_model_len=4096           # Cap the context window (adjust as needed for your prompts)
+        gpu_memory_utilization=0.3,  # Tell vLLM to only reserve 30% of your VRAM
+        max_model_len=2048           # Cap the context window (shorter = less KV cache VRAM)
     )
     
     print("Model loaded successfully! Starting Flask server... 🍓")

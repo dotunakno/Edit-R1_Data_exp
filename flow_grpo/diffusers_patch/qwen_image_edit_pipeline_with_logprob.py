@@ -11,7 +11,7 @@ from diffusers.pipelines.qwenimage.pipeline_qwenimage_edit_plus import (
 
 from diffusers.image_processor import PipelineImageInput
 from flow_grpo.diffusers_patch.solver import run_sampling
-
+from diffusers.utils.torch_utils import randn_tensor
 
 CONDITION_IMAGE_SIZE = 384 * 384
 VAE_IMAGE_SIZE = 1024 * 1024
