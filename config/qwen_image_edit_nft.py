@@ -56,7 +56,8 @@ def _get_config(base_model="qwen_image_edit", n_gpus=1, gradient_step_per_epoch=
     config.prompt_fn = "geneval"
 
     config.run_name = f"nft_{base_model}_{name}"
-    config.save_dir = f"logs/nft/{base_model}/{name}"
+    config.save_dir = f"/content/drive/MyDrive/logs/nft/{base_model}/{name}"
+    config.resume_from = f"/content/drive/MyDrive/logs/nft/{base_model}/{name}/checkpoint-10-assume"
     config.reward_fn = reward_fn
 
     config.decay_type = 1
