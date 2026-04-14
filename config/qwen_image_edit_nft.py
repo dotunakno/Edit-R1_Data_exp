@@ -12,7 +12,7 @@ def _get_config(base_model="qwen_image_edit", n_gpus=1, gradient_step_per_epoch=
 
     config.base_model = base_model
     config.transformer_path = None
-    config.dataset = "/content/Edit-r1_Data_exp/Data-dir/Dataset_Teacher"
+    config.dataset = "/content/Edit-R1_Data_exp/Data-dir/Dataset_Teacher"
     
     config.pretrained.model = "Qwen/Qwen-Image-Edit-2511"
     config.sample.num_steps = 6
@@ -22,7 +22,7 @@ def _get_config(base_model="qwen_image_edit", n_gpus=1, gradient_step_per_epoch=
     config.train.beta = 0.0001
     config.sample.noise_level = 0.7
     bsz = 2
-    
+
     config.sample.num_image_per_prompt = 2
 
     config.sample.ban_std_thres = 0.05
