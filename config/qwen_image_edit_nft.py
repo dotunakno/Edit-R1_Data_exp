@@ -18,11 +18,11 @@ def _get_config(base_model="qwen_image_edit", n_gpus=1, gradient_step_per_epoch=
     config.sample.num_steps = 6
     config.sample.eval_num_steps = 15
     config.sample.guidance_scale = 1.0
-    config.resolution = 384
+    config.resolution = 256
     config.train.beta = 0.0001
     config.sample.noise_level = 0.7
     bsz = 2
-
+    
     config.sample.num_image_per_prompt = 2
 
     config.sample.ban_std_thres = 0.05

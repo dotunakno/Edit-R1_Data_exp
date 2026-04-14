@@ -117,7 +117,7 @@ if __name__ == "__main__":
         limit_mm_per_prompt={"image": 3}, 
         tensor_parallel_size=1,
         
-        gpu_memory_utilization=0.3,  # Tell vLLM to only reserve 30% of your VRAM
+        gpu_memory_utilization=0.2,  # Tell vLLM to only reserve 20% of your VRAM
         max_model_len=2048           # Cap the context window (shorter = less KV cache VRAM)
     )
     
